@@ -20,10 +20,10 @@ const (
 // BaseResponse is the base response struct.
 type BaseResponse[T any] struct {
 	// Code represents the business code, not the http xstatus code.
-	Code int ` json:"ret_code" xml:"ret_code"`
+	Code int ` json:"code" xml:"code"`
 	// Msg represents the business message, if Code = BusinessCodeOK,
 	// and Msg is empty, then the Msg will be set to BusinessMsgOk.
-	Message string `json:"ret_msg" xml:"ret_msg"`
+	Message string `json:"message" xml:"message"`
 	// Data represents the business data.
 	Data T `json:"data,omitempty" xml:"data,omitempty"`
 }
