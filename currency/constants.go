@@ -50,6 +50,12 @@ func MaoToYuan(c int64) string {
 	return decimal.NewFromInt(c).Div(decimal.NewFromInt(int64(Mao))).String()
 }
 
+// MaoToYuanFloat 微转元
+func MaoToYuanFloat(data int64) float64 {
+	balance, _ := decimal.NewFromInt(data).Div(decimal.NewFromInt(int64(Mao))).RoundFloor(2).Float64()
+	return balance
+}
+
 func WeiToYuanFloor(c int64) decimal.Decimal {
 	return decimal.NewFromInt(c).Div(decimal.NewFromInt(int64(Wei))).Floor()
 }
