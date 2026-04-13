@@ -15,13 +15,13 @@ const (
 
 var (
 	// ***系统错误**
-	ErrServer = New(ErrServerCode, "系统错误")
-	ErrDB     = New(ErrDBCode, "存储错误")
-	ErrCache  = New(ErrCacheCode, "缓存错误")
+	ErrServer = New(ErrServerCode, "server error")
+	ErrDB     = New(ErrDBCode, "storage error")
+	ErrCache  = New(ErrCacheCode, "cache error")
 
 	// ***通用错误***
-	ErrParam          = New(ErrParamCode, "参数错误")
-	ErrRecordNotFound = New(ErrRecordNotFoundCode, "数据不存在")
-	ErrRecordExisted  = New(ErrRecordExistedCode, "数据已存在")
-	ErrUnauthorized   = New(ErrUnauthorizedCode, "无权限")
+	ErrParam          = New(ErrParamCode, "params error")
+	ErrRecordNotFound = New(ErrRecordNotFoundCode, "record not found")
+	ErrRecordExisted  = New(ErrRecordExistedCode, "record existed")
+	ErrUnauthorized   = New(ErrUnauthorizedCode, "unauthorized")
 )
